@@ -1,0 +1,87 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+    margin:0;
+}
+
+.dashboard-text{
+    
+    margin:20px auto;
+    font-size:16px;
+    line-height:1.8;
+    color:#444;
+    text-align:left;
+    font-style:arial;
+    font-weight:bold;
+}
+
+.box{
+    width:300px;
+    margin:100px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+input,button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    background:blue;
+    color:white;
+    border:none;
+}
+
+.btn-kembali,
+.btn-tambah{
+    display:inline-block;
+    padding:10px 15px;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    margin:10px 5px;
+}
+
+.btn-kembali{
+    background:gray;
+}
+
+.btn-tambah{
+    background:blue;
+}
+
+nav{
+    background:blue;
+    color:white;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+table{
+    width:80%;
+    margin:20px auto;
+    border-collapse:collapse;
+    background:white;
+}
+
+th,td{
+    padding:10px;
+}
