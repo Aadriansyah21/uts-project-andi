@@ -9,9 +9,10 @@ $row = mysqli_fetch_assoc($data);
 if(isset($_POST['update'])){
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
+    $no_tlpn = $_POST['no_tlpn'];
 
     mysqli_query($conn,"UPDATE pelanggan 
-    SET nama='$nama', alamat='$alamat'
+    SET nama='$nama', alamat='$alamat', no_tlpn='$no_tlpn'
     WHERE id='$id'");
 
     header("Location: pelanggan.php");
@@ -32,6 +33,7 @@ if(isset($_POST['update'])){
     <form method="POST">
         <input type="text" name="nama" value="<?= $row['nama'] ?>">
         <input type="text" name="alamat" value="<?= $row['alamat'] ?>">
+        <input type="text" name="no_tlpn" value="<?= $row['no_tlpn'] ?>">
         <button name="update">Update</button>
     </form>
 </div>

@@ -26,6 +26,7 @@ $data = mysqli_query($conn,"SELECT * FROM pelanggan");
     <th>No</th>
     <th>Nama</th>
     <th>Alamat</th>
+    <th>No_Tlpn</th>
     <th>Aksi</th>
 </tr>
 
@@ -34,6 +35,7 @@ $data = mysqli_query($conn,"SELECT * FROM pelanggan");
     <td><?= $no++ ?></td>
     <td><?= $row['nama'] ?></td>
     <td><?= $row['alamat'] ?></td>
+    <td><?= $row['no_tlpn'] ?></td>
     <td>
         <a href="hapus.php?id=<?= $row['id'] ?>">Hapus</a>
         <a href="edit.php?id=<?= $row['id'] ?>">edit</a>

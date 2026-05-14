@@ -1,87 +1,258 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
-    font-family: Arial;
-    background:#f4f4f4;
-    margin:0;
+    background-color: #f9f5f4;
 }
 
+/* NAVBAR */
+nav, .navbar{
+    width: 100%;
+    background: #2563eb;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2, .navbar h1{ color: white; font-size: 28px; }
+
+nav ul{ display: flex; list-style: none; gap: 20px; }
+
+nav ul li a, .navbar nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav ul li a:hover{ background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+nav ul li a:active{ transform: scale(0.95); }
+
+/* DASHBOARD IMAGE */
+.dashboard-image{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 32px;
+    margin-top: 30px;
+}
+
+.dashboard-image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    transition: 0.3s;
+    cursor: pointer;
+    display: block;
+}
+
+.dashboard-image img:hover{ transform: scale(1.04); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+.dashboard-image img:active{ transform: scale(0.98); }
+.dashboard-image .img2{ height: 200px; margin-top: 0; }
+
+
+/* LAYANAN CARD - DASHBOARD */
+.layanan-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.layanan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.layanan-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+.layanan-card:hover img { transform: scale(1.04); }
+
+.layanan-info {
+    padding: 16px 20px;
+    border-top: 3px solid #2563eb;
+}
+
+.layanan-info h3 {
+    font-size: 18px;
+    color: #1e3a8a;
+    margin-bottom: 6px;
+}
+
+.layanan-info .harga {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.layanan-info .pesan {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.layanan-card:hover .pesan { background: #1d4ed8; }
+
+/* CONTAINER */
+.container{ width: 90%; max-width: 1100px; margin: 40px auto; }
+.container h1{ margin-bottom: 20px; color: #2563eb; }
+
+/* DASHBOARD TEXT */
 .dashboard-text{
-    
-    margin:20px auto;
-    font-size:16px;
-    line-height:1.8;
-    color:#444;
-    text-align:left;
-    font-style:arial;
-    font-weight:bold;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    line-height: 1.8;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.dashboard-text:hover{ box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }
+
+/* LOGIN & REGISTER */
+.box, .login-box{
+    width: 420px;
+    background: white;
+    margin: 70px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.box:hover, .login-box:hover{ box-shadow: 0 10px 30px rgba(0,0,0,0.15); transform: translateY(-3px); }
+.box h2, .login-box h1{ text-align: center; margin-bottom: 30px; color: #2563eb; }
+.box form, .login-box form{ display: flex; flex-direction: column; }
+
+/* INPUT */
+.box input, .login-box input, form input, form select,
+.transaksi-form input, .transaksi-form select{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+.box input:hover, form input:hover, form select:hover,
+.transaksi-form input:hover, .transaksi-form select:hover{ border-color: #93c5fd; }
+
+.box input:focus, form input:focus, form select:focus,
+.transaksi-form input:focus, .transaksi-form select:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
 }
 
-.box{
-    width:300px;
-    margin:100px auto;
-    background:white;
-    padding:20px;
-    border-radius:10px;
+/* BUTTON */
+.box button, .login-box button, form button, .transaksi-form button{
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
 }
-
-input,button{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
+.box button:hover, .login-box button:hover, form button:hover, .transaksi-form button:hover{
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37,99,235,0.35);
 }
+.box button:active, form button:active, .transaksi-form button:active{ transform: scale(0.97); box-shadow: none; }
 
-button{
-    background:blue;
-    color:white;
-    border:none;
+.box a, .login-box a{
+    text-decoration: none; color: #2563eb;
+    text-align: center; margin-top: 15px; display: block; transition: 0.2s;
 }
+.box a:hover, .login-box a:hover{ text-decoration: underline; color: #1d4ed8; }
 
-.btn-kembali,
-.btn-tambah{
-    display:inline-block;
-    padding:10px 15px;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    margin:10px 5px;
-}
-
-.btn-kembali{
-    background:gray;
-}
-
-.btn-tambah{
-    background:blue;
-}
-
-nav{
-    background:blue;
-    color:white;
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-}
-
-nav ul li{
-    margin-left:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-}
-
+/* TABLE */
 table{
-    width:80%;
-    margin:20px auto;
-    border-collapse:collapse;
-    background:white;
+    width: 100%; border-collapse: collapse; margin-top: 20px;
+    background: white; border-radius: 10px; overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
+table th{ background: #2563eb; color: white; padding: 15px; text-align: center; }
+table td{ padding: 14px; text-align: center; border-bottom: 1px solid #eee; }
+table tr{ transition: 0.2s; cursor: pointer; }
+table tr:hover{ background: #eff6ff; }
+table td a{ color: black; text-decoration: none; font-weight: 500; transition: 0.2s; }
+table td a:hover{ text-decoration: underline; color: #2563eb; }
 
-th,td{
-    padding:10px;
+/* BTN CLASSES */
+.btn-tambah, .btn-kembali, .btn, .btn-warning, .btn-danger, .btn-primary, table a{
+    display: inline-block; padding: 10px 16px; border-radius: 8px;
+    text-decoration: none; color: white; margin: 5px; font-size: 14px; transition: 0.2s;
+}
+.btn-tambah{ background: #16a34a; }
+.btn-kembali, .btn-primary{ background: #2563eb; }
+.btn-warning{ background: #f59e0b; }
+.btn-danger{ background: #dc2626; }
+
+.btn-tambah:hover{ background: #15803d; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(22,163,74,0.35); }
+.btn-kembali:hover, .btn-primary:hover{ background: #1d4ed8; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(37,99,235,0.35); }
+.btn-warning:hover{ background: #d97706; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(245,158,11,0.35); }
+.btn-danger:hover{ background: #b91c1c; transform: translateY(-3px); box-shadow: 0 6px 16px rgba(220,38,38,0.35); }
+.btn-tambah:active, .btn-kembali:active, .btn-primary:active,
+.btn-warning:active, .btn-danger:active{ transform: scale(0.96); box-shadow: none; }
+
+/* CARD */
+.card, .transaksi-card{
+    background: white; padding: 25px; border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08); transition: 0.3s;
+}
+.card:hover, .transaksi-card:hover{ box-shadow: 0 8px 24px rgba(0,0,0,0.13); transform: translateY(-3px); }
+
+/* TRANSAKSI */
+.transaksi-container{ width: 90%; max-width: 1000px; margin: 40px auto; }
+.transaksi-title{ text-align: center; color: #2563eb; margin-bottom: 30px; font-size: 38px; }
+.transaksi-card{ margin-bottom: 30px; }
+.transaksi-form{ display: flex; flex-direction: column; }
+
+.transaksi-table{
+    width: 100%; border-collapse: collapse; background: white;
+    border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.transaksi-table th{ background: #2563eb; color: white; padding: 15px; }
+.transaksi-table td{ padding: 14px; text-align: center; border-bottom: 1px solid #eee; }
+.transaksi-table tr{ transition: 0.2s; cursor: pointer; }
+.transaksi-table tr:hover{ background: #eff6ff; }
+
+/* MISC */
+.page-title{ margin-bottom: 25px; color: #2563eb; }
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    nav, .navbar{ flex-direction: column; gap: 15px; }
+    nav ul{ flex-direction: column; text-align: center; }
+    .box, .login-box{ width: 90%; }
+    table{ font-size: 14px; }
 }
