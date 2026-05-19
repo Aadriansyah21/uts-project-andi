@@ -34,8 +34,80 @@ nav ul li a, .navbar nav a{
     display: inline-block;
 }
 
-nav ul li a:hover{ background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+nav ul li a:hover{ background: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
 nav ul li a:active{ transform: scale(0.95); }
+
+/* LANDING PAGE */
+.landing-nav{
+    background:#2563eb; padding:18px 40px;
+    display:flex; justify-content:space-between; align-items:center;
+}
+.landing-nav h2{ color:white; font-size:28px; }
+.landing-nav ul{ display:flex; gap:20px; list-style:none; }
+.landing-nav a{ color:white; text-decoration:none; font-weight:bold; }
+
+.btn-login{
+    background:white; color:#2563eb !important;
+    padding:8px 16px; border-radius:8px;
+}
+
+/* HERO */
+.hero{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:80px 8%; background:#eff6ff;
+}
+.hero-text{ width:50%; }
+.hero-text h1{ font-size:48px; color:#1e3a8a; margin-bottom:20px; }
+.hero-text p{ font-size:18px; line-height:1.7; margin-bottom:25px; }
+
+.hero-btn{
+    display:inline-block; background:#2563eb; color:white;
+    padding:14px 24px; border-radius:10px;
+    text-decoration:none; font-weight:bold;
+}
+.hero-btn:hover{ background:#1d4ed8; }
+
+.hero-image{ width:45%; }
+.hero-image img{
+    width:100%; border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* LAYANAN */
+.layanan-section{ padding:70px 8%; text-align:center; }
+.layanan-section h2{ font-size:36px; color:#2563eb; margin-bottom:40px; }
+
+.layanan-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:25px;
+}
+
+.layanan-box{
+    background:white; border-radius:18px; overflow:hidden;
+    box-shadow:0 5px 18px rgba(0,0,0,.08); transition:.3s;
+}
+.layanan-box:hover{ transform:translateY(-8px); }
+
+.layanan-box img{
+    width:100%; height:220px; object-fit:cover;
+}
+.layanan-box h3{ margin:20px 0 10px; color:#1e3a8a; }
+.layanan-box p{ padding:0 20px; margin-bottom:15px; }
+.layanan-box span{
+    display:inline-block; margin-bottom:20px;
+    color:#2563eb; font-weight:bold;
+}
+
+/* TENTANG */
+.tentang{
+    background:white; padding:70px 8%; text-align:center;
+}
+.tentang h2{ color:#2563eb; margin-bottom:20px; }
+
+/* FOOTER */
+footer{
+    background:#1e3a8a; color:white;
+    text-align:center; padding:20px;
+}
 
 /* DASHBOARD IMAGE */
 .dashboard-image{
@@ -97,7 +169,7 @@ nav ul li a:active{ transform: scale(0.95); }
 
 .layanan-info h3 {
     font-size: 18px;
-    color: #1e3a8a;
+    color: #121213;
     margin-bottom: 6px;
 }
 

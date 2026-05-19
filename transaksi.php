@@ -68,7 +68,13 @@ $edit = isset($_GET['edit']) ? mysqli_fetch_array(mysqli_query($conn,"SELECT * F
     </div>
 
     <table class="transaksi-table">
-        <tr><th>No</th><th>Nama</th><th>Layanan</th><th>Berat</th><th>Total</th><th>Aksi</th></tr>
+    <tr><th>No</th>
+        <th>Nama</th>
+        <th>Layanan</th>
+        <th>Berat</th>
+        <th>Total</th>
+        <th>Aksi</th>
+    </tr>
         <?php $no=1; $data=mysqli_query($conn,"SELECT * FROM transaksi");
         while($d=mysqli_fetch_array($data)): ?>
         <tr>
